@@ -1,0 +1,101 @@
+@import "reset.css";
+body {
+  font-family: "Train One", cursive;
+}
+a {
+  color: #f0f3f4;
+  text-decoration: none;
+}
+/*nav-bar*/
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #242d3c;
+  align-items: center;
+}
+/*title*/
+.dreamCoding-title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.dreamCoding-title i {
+  color: #ff6f61;
+  margin-right: 20px;
+}
+/*menu*/
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding: 20px;
+}
+.menu li:hover {
+  color: white;
+  background-color: #ff6f61;
+  border-radius: 10px;
+}
+.menu li:active {
+  color: pink;
+}
+/*icons*/
+.twitter-facebook-icons a {
+  margin-left: 20px;
+}
+.twitter-facebook-icons a:hover {
+  color: pink;
+}
+.twitter-facebook-icons a:active {
+  color: #ff6f61;
+}
+.hamburgers {
+  display: none;
+}
+/*화면 작아졌을 때*/
+@media screen and (max-width: 882px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+  .menu a {
+    width: 100%;
+    text-align: center;
+  }
+  .twitter-facebook-icons {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+  }
+  .twitter-facebook-icons a {
+    margin-left: 0px;
+    padding: 0px 10px;
+  }
+  .hamburgers {
+    display: flex;
+    position: absolute;
+    font-size: 2rem;
+    right: 30px;
+    top: 40px;
+  }
+  .hamburgers a:hover {
+    color: pink;
+  }
+  .hamburgers a:active {
+    color: #ff6f61;
+  }
+  .menu.active,
+  .twitter-facebook-icons.active {
+    display: block;
+  }
+}
